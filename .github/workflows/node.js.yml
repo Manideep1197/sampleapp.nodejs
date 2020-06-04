@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2.2.0
+      - name: setup node.js environment
+        uses: actions/setup-node@v1
         with: 
          node-version: 14.x
       - run: npm install
