@@ -16,6 +16,13 @@ jobs:
       - name: setup node.js environment
         uses: actions/setup-node@v1
         with: 
-         node-version: 14.x
+         node-version: 10.x
       - run: npm install
       - run: npm build
+      - name: Azure WebApp
+        uses: Azure/webapps-deploy@v2
+        with:
+          app-name: githubnode
+          publish-profile: ${{secrets.PUBLISH_PROFILE}}
+
+
