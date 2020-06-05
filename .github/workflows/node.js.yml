@@ -18,7 +18,7 @@ jobs:
         with: 
          node-version: 10.x
       - run: npm install
-      - run: npm run build --Prod
+      - run: npm run build --prod
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2
         with:
